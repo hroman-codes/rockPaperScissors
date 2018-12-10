@@ -3,10 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      
+      <h1>Rock Paper Scissors</h1>
     </header>
+
+    <div class="scoreBord">
+      <div class="badge" id="user-label">user</div>
+      <div class="badge" id="computer-label">comp</div>
+      <span id="userScore">0</span>:<span id="computerScore">0</span>
+    </div>
+
+    <div class="result">
+      <p>Paper covers rock. You win!</p> 
+    </div>
+
+    <div class="choices">
+      <div class="choice" id="rock">
+        <i class="far fa-hand-rock fa-4x"></i>
+      </div>
+      <div class="choice" id="paper">
+        <i class="far fa-hand-paper fa-4x"></i>
+      </div>
+      <div class="choice" id="scissors">
+        <i class="far fa-hand-scissors fa-4x"></i>
+      </div>
+    </div>
+
+    <p id="actionMessage">Make your move</p>
   </body>
 </html>
