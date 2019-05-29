@@ -6,36 +6,29 @@
   box-sizing: border-box;
 }
 
+#actionMessage {
+  text-align: center;
+  color: #fff;
+  font-family: Asap, sans-serif;
+  font-weight: bold;
+  font-size:20px;
+  margin-top: 20px;
+}
+
 body {
   background-color: #24272E;
 }
 
-.rpcIcon {
+.bestOfFive {
   color: white;
-}
-
-header {
-  background: #fff;
-  padding: 20px;
-}
-
-header > h1 {
-  color: #24272E;
-  text-align: center;
-  font-family: Asap, sans-serif;;
-}
-
-.scoreBord {
-  border: 3px solid white;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 46px;
   font-family: Asap, sans-serif;
-  margin: 20px auto;
-  padding: 15px 20px;
-  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
-  width: 200px;
+}
+
+.bestOfFive > p {
+  padding-top: 10px;
 }
 
 .badge {
@@ -46,27 +39,10 @@ header > h1 {
   font-family: Asap, sans-serif;
 }
 
-#userLabel {
-  position: absolute;
-  top: 30px;
-  left: -25px;
-}
-
 #computerLabel {
   position: absolute;
   top: 30px;
   right: -30px
-}
-
-.result {
-  font-size: 40px;
-  color: #fff;
-}
-
-.result > p {
-  text-align: center;
-  font-family: Asap, sans-serif;
-  font-weight: bold;
 }
 
 .choices {
@@ -88,18 +64,42 @@ header > h1 {
   background: #253B49;
 }
 
-#actionMessage {
-  text-align: center;
-  color: #fff;
-  font-family: Asap, sans-serif;
-  font-weight: bold;
-  font-size:20px;
-  margin-top: 20px;
+header {
+  background: #fff;
+  padding: 20px;
 }
+
+header > h1 {
+  color: #24272E;
+  text-align: center;
+  font-family: Asap, sans-serif;;
+}
+
 
 .greenGlow {
   border: 4px solid #4dcc7d;
   box-shadow: 0 0 10px #31b43a;
+}
+
+
+.grayGlow {
+  border: 4px solid #464647;
+  box-shadow: 0 0 10px #25292b;
+}
+
+.rpcIcon {
+  color: white;
+}
+
+.result {
+  font-size: 40px;
+  color: #fff;
+}
+
+.result > p {
+  text-align: center;
+  font-family: Asap, sans-serif;
+  font-weight: bold;
 }
 
 .redGlow {
@@ -107,7 +107,42 @@ header > h1 {
   box-shadow: 0 0 10px #d01115;
 }
 
-.grayGlow {
-  border: 4px solid #464647;
-  box-shadow: 0 0 10px #25292b;
+.scoreBord {
+  border: 3px solid white;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 46px;
+  font-family: Asap, sans-serif;
+  margin: 20px auto;
+  padding: 15px 20px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+}
+
+#userLabel {
+  position: absolute;
+  top: 30px;
+  left: -25px;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+[class |= "confetti"] {
+  position: absolute;
+}
+
+.red {
+  background-color: #dc2626;
+}
+
+.yellow {
+  background-color: #ffbf00;
+}
+
+.blue {
+  background-color: #6eaff3;
 }

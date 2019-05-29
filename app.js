@@ -96,6 +96,7 @@ function win(userChoice, computerChoice){
   setTimeout(function(){
     userChoice_div.classList.remove('greenGlow')
   }, 300);
+  checkWinner()
 }
 
 function lose(userChoice, computerChoice){
@@ -111,6 +112,7 @@ function lose(userChoice, computerChoice){
   setTimeout(function(){
     userChoice_div.classList.remove('redGlow')
   }, 300);
+  checkWinner()
 }
 
 function tie(userChoice, computerChoice){
@@ -124,3 +126,34 @@ function tie(userChoice, computerChoice){
     userChoice_div.classList.remove('grayGlow')
   }, 300);
 }
+
+// create a function that runs after every time win(), loos(), and tie() is ivoked
+// the function will check the userScore computerScore variables
+function checkWinner() {
+  // if the userScore value is 5
+  if (userScore === 5) {
+    // fire off a prompt to let the user know they won
+    console.log('You win!')
+    // fire off animation, for loop to create all of the confetti when user wins
+    for (var i = 0; i < 30; i++) {
+      create(i)
+    }
+  }
+  // if the computerScore value is 5
+  if (computerScore === 5) {
+    // fire off a prompt to let the user know they won
+    console.log('Computer Wins!')
+    // fire off animation, for loop to create all of the confetti when user wins
+    for (var i = 0; i < 30; i++) {
+      create(i)
+    }
+  }
+}
+
+// Create confetti particles
+function create(i) {
+  //Generates random number, then multiples by 15
+  
+}
+
+// create a function to reset the game.
