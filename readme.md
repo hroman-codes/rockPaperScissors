@@ -7,6 +7,7 @@ Live link: https://getromanin.github.io/rockPaperScissors/
 
 ## Future Customizations:
 
-#### `Best of out 5 series option`
-- [] Game prompts a winner after a 🎮 wins best out of 5
-- [] 🚦 to the 🎮 if user or comp won the series
+#### `In Progress`
+- Game prompts a winner after a 🎮 wins best out of 5
+- 🚦 to the 🎮 if user or comp won the series
+- Reset the game
