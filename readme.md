@@ -7,13 +7,6 @@ Live link: https://getromanin.github.io/rockPaperScissors/
 
 ## Future Customizations:
 
-#### `Timer Option`
-- [] After each play show countdown ⏲ with animation and 🔉
-- [] Prevents 🎮 from playing until the 🚀 📰 ✂️, ⏲ is complete
-- [] In the ⏲ show an animation and 🔉 that says 🚀 📰 ✂️ GO!
-- [] Then 🚦 the 🎮 to play again
-
-#### `Best of out x series option`
-- [] Allow the 🎮 to choose which series they would like to compete in i.e. `best of 2 out of 3`
-- [] Provides a counter of who is winning the series
+#### `Best of out 5 series option`
+- [] Game prompts a winner after a 🎮 wins best out of 5
 - [] 🚦 to the 🎮 if user or comp won the series
