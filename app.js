@@ -12,6 +12,7 @@ const result_p = document.querySelector('.result > p');
 const rock_div = document.getElementById('rock');
 const paper_div = document.getElementById('paper');
 const scissors_div = document.getElementById('scissors');
+const choices_div = document.getElementById('postWin');
 
 // add event listeners
 // log out the clicks to the console
@@ -136,8 +137,10 @@ function checkWinner() {
     console.log('You win!')
     // fire off animation, for loop to create all of the confetti when user wins
     for (var i = 0; i < 30; i++) {
+      console.log('create i was called on winner')
       create(i)
     }
+    removeClassRPC()
   }
   // if the computerScore value is 5
   if (computerScore === 5) {
@@ -145,15 +148,80 @@ function checkWinner() {
     console.log('Computer Wins!')
     // fire off animation, for loop to create all of the confetti when user wins
     for (var i = 0; i < 30; i++) {
+      console.log('create i was called on comp')
       create(i)
     }
+    removeClassRPC()
   }
 }
 
-// Create confetti particles
-function create(i) {
+//create confetti particles
+function create(i){
+  // Create confetti particles
+
   //Generates random number, then multiples by 15
-  
+  var width = Math.random() * 15;
+
+  //Takes generated width, multiplies by .4 for height
+  var height = width * 0.4;
+
+  //generates a random number to decide whether the confetti is blue, yellow, or red
+  var colorIdx = Math.ceil(Math.random() * 3);
+  var color = "red";
+
+  // Select random color for particle
+  switch(colorIdx){
+    case 1:
+      color = "yellow";
+      break;
+    case 2:
+      color = "blue";
+      break;
+    default:
+      color = "red";
+  }
+
+  // Create DOM object for particle
+  // and add particle to wrapper
+  $('<div class="confetti-'+i+' '+color+'"></div>').css({
+    "width" : width+"px",
+    "height" : height+"px",
+    "top" : -Math.random()*20+"%",
+    "left" : Math.random()*100+"%",
+    "opacity" : Math.random()+0.5,
+    "transform" : "rotate("+Math.random()*360+"deg)"
+  }).appendTo('.wrapper');
+
+  // Make confetti drop
+  drop(i);
+}
+
+function drop(x) {
+  $('.confetti-'+x).animate({
+    top: "100%",
+    left: "+="+Math.random()*15+"%"
+  }, Math.random()*2000 + 2000, function() {
+    reset(x);
+  });
+}
+
+
+function reset(x) {
+  // Reset opacity
+  $('.confetti-'+x).css('opacity','1');
+
+  $('.confetti-'+x).animate({
+    "top" : -Math.random()*20+"%",
+    "left" : "-="+Math.random()*15+"%"
+  }, 0, function() {
+    drop(x);
+  });
+}
+
+// create a function to remove the event handler on rpcIcon
+function removeClassRPC() {
+  console.log('I fucking work');
+  choices_div.classList.remove("choice");
 }
 
 // create a function to reset the game.
