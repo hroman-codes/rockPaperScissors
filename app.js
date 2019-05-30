@@ -196,6 +196,7 @@ function create(i){
   drop(i);
 }
 
+// write a function to drop the confetti from the top on the window
 function drop(x) {
   $('.confetti-'+x).animate({
     top: "100%",
@@ -220,8 +221,14 @@ function reset(x) {
 
 // create a function to remove the event handler on rpcIcon
 function removeClassRPC() {
-  console.log('I fucking work');
-  choices_div.classList.remove("choice");
+  let actionMessage_div = document.getElementById('actionMessage');
+  let buttonOuterDiv = document.getElementById('dynamicButton');
+  let btn = document.createElement("BUTTON");
+
+  actionMessage_div.innerHTML = 'Play Again!'
+  choices_div.outerHTML = '';
+  btn.innerHTML = "New Game";
+  buttonOuterDiv.appendChild(btn);
 }
 
 // create a function to reset the game.

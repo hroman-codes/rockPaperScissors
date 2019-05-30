@@ -39,6 +39,27 @@ body {
   font-family: Asap, sans-serif;
 }
 
+button {
+  border-radius: 4px;
+  background-color: #e2584d;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 180px;
+  cursor: pointer;
+  margin: 5px;
+  transition:
+    width 1s,
+    background 0.5s 1s;
+}
+
+button:hover {
+  width: 250px;
+  background: orange;
+}
+
 #computerLabel {
   position: absolute;
   top: 30px;
@@ -62,6 +83,11 @@ body {
 .choice:hover {
   cursor: pointer;
   background: #253B49;
+}
+
+#dynamicButton {
+  text-align: center;
+  margin-top: 20px;
 }
 
 header {
