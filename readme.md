@@ -10,4 +10,5 @@ Live link: https://getromanin.github.io/rockPaperScissors/
 #### `In Progress`
 - Game prompts a winner after a 🎮 wins best out of 5
 - 🚦 to the 🎮 if user or comp won the series
-- Reset the game
+- Add game confetti and audio after 🎮 wins   
+- Game reset functionality
