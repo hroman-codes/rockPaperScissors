@@ -141,7 +141,6 @@ function checkWinner() {
     console.log('You win!')
     // fire off animation, for loop to create all of the confetti when user wins
     for (var i = 0; i < 30; i++) {
-      console.log('create i was called on winner')
       create(i)
     }
     removeClassRPC()
@@ -153,7 +152,6 @@ function checkWinner() {
     console.log('Computer Wins!')
     // fire off animation, for loop to create all of the confetti when user wins
     for (var i = 0; i < 30; i++) {
-      console.log('create i was called on comp')
       create(i)
     }
     removeClassRPC()
@@ -167,14 +165,14 @@ function create(i){
 
   //Generates random number, then multiples by 15
   var width = Math.random() * 15;
-
+  console.log('width ==>', width);
   //Takes generated width, multiplies by .4 for height
   var height = width * 0.4;
-
+  console.log('height ==>', height)
   //generates a random number to decide whether the confetti is blue, yellow, or red
   var colorIdx = Math.ceil(Math.random() * 3);
   var color = "red";
-
+  console.log('colorIdx ==>', colorIdx)
   // Select random color for particle
   switch(colorIdx){
     case 1:
@@ -234,13 +232,20 @@ function removeClassRPC() {
   actionMessage_div.innerHTML = 'Play Again!'
   choices_div.outerHTML = '';
   btn.innerHTML = "New Game";
+  btn.addEventListener('click', function() {
+    resetGame();
+  })
   buttonOuterDiv.appendChild(btn);
 }
 
 // create a function to play winning winningMusic
 function playWinningMusic() {
-  console.log('music is playing');
+  console.log('winng music is playing');
   winningMusic.play();
 }
 
 // create a function to reset the game.
+// going to use the window reset vs creating state and re-uploading nodes
+function resetGame() {
+  window.location.reload();
+}
