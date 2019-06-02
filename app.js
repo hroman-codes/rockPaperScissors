@@ -13,6 +13,10 @@ const rock_div = document.getElementById('rock');
 const paper_div = document.getElementById('paper');
 const scissors_div = document.getElementById('scissors');
 const choices_div = document.getElementById('postWin');
+const winningMusic = document.getElementById('winningMusic');
+
+// set up initial text state for .result > p
+document.querySelector('.result > p').innerHTML = 'Pick your poison Rock, Paper, Scissors';
 
 // add event listeners
 // log out the clicks to the console
@@ -141,6 +145,7 @@ function checkWinner() {
       create(i)
     }
     removeClassRPC()
+    playWinningMusic()
   }
   // if the computerScore value is 5
   if (computerScore === 5) {
@@ -152,6 +157,7 @@ function checkWinner() {
       create(i)
     }
     removeClassRPC()
+    playWinningMusic()
   }
 }
 
@@ -229,6 +235,12 @@ function removeClassRPC() {
   choices_div.outerHTML = '';
   btn.innerHTML = "New Game";
   buttonOuterDiv.appendChild(btn);
+}
+
+// create a function to play winning winningMusic
+function playWinningMusic() {
+  console.log('music is playing');
+  winningMusic.play();
 }
 
 // create a function to reset the game.
