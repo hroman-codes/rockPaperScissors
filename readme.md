@@ -2,7 +2,7 @@
 A rock 🚀 paper 📰 scissors ✂️  game built using HTML, CSS and Javascript.
 
 ## Live Link:
-https://getromanin.github.io/rockPaperScissors/
+https://getromandev.github.io/rockPaperScissors/
 
 ## Completed Customizations:
 
